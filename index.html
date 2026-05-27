@@ -912,6 +912,89 @@ body.ltr { font-family:'Heebo','Arial',sans-serif; }
   color:var(--text-muted);
 }
 
+/* ─── PRESS ─── */
+#press {
+  padding:100px 0;
+  background:var(--bg);
+  position:relative;
+}
+#press::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-border),transparent);
+}
+.press-header { text-align:center; }
+.press-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+@media(max-width:1024px){ .press-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:600px){ .press-grid{ grid-template-columns:1fr; } }
+.press-card {
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--radius);
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  transition:var(--transition);
+  text-decoration:none;
+  color:inherit;
+}
+.press-card:hover {
+  border-color:var(--gold-border);
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+.press-source {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.press-source-dot {
+  width:8px; height:8px;
+  background:var(--gold);
+  border-radius:50%;
+  flex-shrink:0;
+}
+.press-source-name {
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.press-date {
+  font-size:0.75rem;
+  color:var(--text-muted);
+  margin-right:auto;
+}
+[dir="ltr"] .press-date { margin-right:0; margin-left:auto; }
+.press-title {
+  font-family:'Playfair Display',serif;
+  font-size:1.05rem;
+  font-weight:600;
+  color:var(--white);
+  line-height:1.45;
+  flex:1;
+}
+.press-read-more {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:0.82rem;
+  font-weight:600;
+  color:var(--gold);
+  margin-top:4px;
+}
+.press-read-more svg { transition:var(--transition); }
+.press-card:hover .press-read-more svg { transform:translateX(4px); }
+[dir="rtl"] .press-card:hover .press-read-more svg { transform:translateX(-4px); }
+
 /* ─── FOOTER ─── */
 footer {
   background:var(--bg2);
@@ -1058,6 +1141,7 @@ footer {
   <a href="#about" class="mobile-link" data-key="nav.about"></a>
   <a href="#services" class="mobile-link" data-key="nav.services"></a>
   <a href="#testimonials" class="mobile-link" data-key="nav.testimonials"></a>
+  <a href="#press" class="mobile-link" data-key="nav.press"></a>
   <a href="#contact" class="mobile-link" data-key="nav.contact"></a>
   <div class="lang-switcher" style="margin-top:20px">
     <button class="lang-btn active" id="mobileLangHe" onclick="setLang('he')">עב</button>
@@ -1078,6 +1162,7 @@ footer {
         <li><a href="#about" data-key="nav.about"></a></li>
         <li><a href="#services" data-key="nav.services"></a></li>
         <li><a href="#testimonials" data-key="nav.testimonials"></a></li>
+        <li><a href="#press" data-key="nav.press"></a></li>
         <li><a href="#contact" data-key="nav.contact"></a></li>
       </ul>
       <div class="nav-right">
@@ -1458,6 +1543,35 @@ footer {
   </div>
 </section>
 
+<!-- ─── PRESS ─── -->
+<section id="press">
+  <div class="container">
+    <div class="press-header reveal">
+      <span class="section-badge" data-key="press.badge"></span>
+      <h2 class="section-title" data-key="press.title"></h2>
+      <p class="section-subtitle" data-key="press.subtitle"></p>
+    </div>
+    <div class="press-grid">
+
+      <a class="press-card reveal reveal-delay-1"
+         href="https://dynews.co.il/%D7%AA%D7%A7%D7%A3-%D7%90%D7%AA-%D7%91%D7%AA-%D7%96%D7%95%D7%92%D7%95-%D7%95%D7%A9%D7%95%D7%97%D7%A8%D7%A8-%D7%91%D7%AA%D7%A0%D7%90%D7%99-%D7%94%D7%A8%D7%97%D7%A7%D7%94/"
+         target="_blank" rel="noopener">
+        <div class="press-source">
+          <span class="press-source-dot"></span>
+          <span class="press-source-name">DYNews</span>
+          <span class="press-date">19.08.2025</span>
+        </div>
+        <div class="press-title" data-key="press.a1title"></div>
+        <span class="press-read-more">
+          <span data-key="press.readMore"></span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- ─── FOOTER ─── -->
 <footer>
   <div class="container">
@@ -1513,6 +1627,7 @@ const i18n = {
     'nav.services': 'שירותים',
     'nav.testimonials': 'המלצות',
     'nav.contact': 'צור קשר',
+    'nav.press': 'בתקשורת',
     'nav.cta': 'ייעוץ חינמי',
     'nav.logoMain': 'עו"ד יגאל טרובמן',
     'nav.logoSub': 'משרד עורכי דין פלילי',
@@ -1612,6 +1727,12 @@ const i18n = {
     'contact.emergency': 'זמין 24/7 לחירום',
     'contact.emergencySub': 'להתקשרות דחופה מחוץ לשעות הפעילות',
 
+    'press.badge': 'בתקשורת',
+    'press.title': 'יגאל טרובמן בעיתונות',
+    'press.subtitle': 'סקירת תיקים ופרסומים בתקשורת הישראלית',
+    'press.readMore': 'לכתבה המלאה',
+    'press.a1title': 'תקף את בת זוגו ושוחרר בתנאי הרחקה',
+
     'footer.name': 'עו"ד יגאל טרובמן',
     'footer.tag': 'משרד עורכי דין פלילי',
     'footer.tagline': 'הגנה משפטית מקצועית — כי עתידך חשוב',
@@ -1629,6 +1750,7 @@ const i18n = {
     'nav.services': 'Услуги',
     'nav.testimonials': 'Отзывы',
     'nav.contact': 'Контакты',
+    'nav.press': 'В прессе',
     'nav.cta': 'Бесплатная консультация',
     'nav.logoMain': 'Адвокат Игаль Трубман',
     'nav.logoSub': 'Уголовно-правовая практика',
@@ -1728,6 +1850,12 @@ const i18n = {
     'contact.emergency': 'Доступен 24/7 для экстренных случаев',
     'contact.emergencySub': 'Для срочных звонков вне рабочего времени',
 
+    'press.badge': 'В прессе',
+    'press.title': 'Игаль Трубман в СМИ',
+    'press.subtitle': 'Публикации и освещение дел в израильских СМИ',
+    'press.readMore': 'Читать полностью',
+    'press.a1title': 'Напал на свою партнёршу и был освобождён с условиями отдаления',
+
     'footer.name': 'Адвокат Игаль Трубман',
     'footer.tag': 'Уголовно-правовая практика',
     'footer.tagline': 'Профессиональная правовая защита — потому что ваше будущее важно',
@@ -1785,7 +1913,7 @@ window.addEventListener('scroll', () => {
 
 // ─── NAV ACTIVE HIGHLIGHTING ────────────────────────────────
 function highlightNav() {
-  const sections = ['hero','about','services','testimonials','contact'];
+  const sections = ['hero','about','services','testimonials','press','contact'];
   const scrollY = window.scrollY + 100;
   let current = 'hero';
   sections.forEach(id => {
