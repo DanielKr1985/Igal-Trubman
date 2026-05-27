@@ -603,7 +603,7 @@ body.ltr { font-family:'Heebo','Arial',sans-serif; }
 .services-header .section-subtitle { margin:0 auto 56px; }
 .services-grid {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap:24px;
 }
 .service-card {
@@ -1107,6 +1107,7 @@ footer {
   .about-grid { grid-template-columns:1fr 1.8fr; gap:40px; }
   .services-grid { grid-template-columns:repeat(2,1fr); }
   .testimonials-grid { grid-template-columns:repeat(2,1fr); }
+  .press-grid { grid-template-columns:repeat(2,1fr); }
 }
 
 @media (max-width:768px) {
@@ -1356,6 +1357,28 @@ footer {
         </div>
         <h3 data-key="services.s6title"></h3>
         <p data-key="services.s6desc"></p>
+        <span class="service-arrow" data-key="services.learnMore">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3 data-key="services.s7title"></h3>
+        <p data-key="services.s7desc"></p>
+        <span class="service-arrow" data-key="services.learnMore">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="16"/></svg>
+        </div>
+        <h3 data-key="services.s8title"></h3>
+        <p data-key="services.s8desc"></p>
         <span class="service-arrow" data-key="services.learnMore">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </span>
@@ -1724,6 +1747,10 @@ const i18n = {
     'services.s5desc': 'הגנה בתיקי תקיפה, איומים, אלימות במשפחה ופגיעה בגוף.',
     'services.s6title': 'ייעוץ משפטי',
     'services.s6desc': 'ייעוץ מיידי, מקצועי וסודי בכל שלב — לפני חקירה, במהלכה ולאחריה.',
+    'services.s7title': 'דיני תעבורה',
+    'services.s7desc': 'ייצוג בעבירות תנועה, שלילת רישיון, נהיגה בשכרות ותאונות דרכים עם נפגעים.',
+    'services.s8title': 'ייצוג אסירים',
+    'services.s8desc': 'ייצוג אסירים בוועדות שחרור, עתירות לשחרור מוקדם ושיפור תנאי מאסר.',
 
     'testimonials.badge': 'המלצות',
     'testimonials.title': 'מה אומרים הלקוחות',
@@ -1850,6 +1877,10 @@ const i18n = {
     'services.s5desc': 'Защита по делам о нападении, угрозах, домашнем насилии и причинении телесных повреждений.',
     'services.s6title': 'Юридическая консультация',
     'services.s6desc': 'Немедленная, профессиональная и строго конфиденциальная консультация на любом этапе — до, во время и после допроса.',
+    'services.s7title': 'Дорожное право',
+    'services.s7desc': 'Защита по делам о нарушениях ПДД, лишении прав, вождении в нетрезвом виде и ДТП с пострадавшими.',
+    'services.s8title': 'Представление заключённых',
+    'services.s8desc': 'Представление заключённых на комиссиях по досрочному освобождению и улучшению условий содержания.',
 
     'testimonials.badge': 'Отзывы',
     'testimonials.title': 'Что говорят клиенты',
