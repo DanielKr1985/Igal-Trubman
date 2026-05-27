@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="עו&quot;ד יגאל טרובמן - עורך דין פלילי מומחה | Адвокат Игаль Трубман - Специалист по уголовному праву">
+<title>עו"ד יגאל טרובמן | Адвокат Игаль Трубман</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #c9a84c;
+  --gold-hover: #dbbe6a;
+  --gold-dim: rgba(201,168,76,0.18);
+  --gold-border: rgba(201,168,76,0.3);
+  --bg: #0d1535;
+  --bg2: #111d42;
+  --bg3: #162249;
+  --card: #1a2d55;
+  --card2: #1f3565;
+  --text: #eaeaea;
+  --text-muted: #8892a4;
+  --text-light: #c5cdd8;
+  --white: #ffffff;
+  --radius: 12px;
+  --shadow: 0 8px 40px rgba(0,0,0,0.5);
+  --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior:smooth; font-size:16px; }
+
+body {
+  font-family:'Heebo','Arial',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+body.ltr { font-family:'Heebo','Arial',sans-serif; }
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--gold-border); border-radius:3px; }
+
+/* ─── SELECTION ─── */
+::selection { background:var(--gold); color:var(--bg); }
+
+/* ─── UTILITY ─── */
+.container { max-width:1200px; margin:0 auto; padding:0 24px; }
+.section-badge {
+  display:inline-block;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--gold);
+  background:var(--gold-dim);
+  border:1px solid var(--gold-border);
+  border-radius:50px;
+  padding:5px 16px;
+  margin-bottom:18px;
+}
+.section-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,2.8rem);
+  font-weight:700;
+  color:var(--white);
+  line-height:1.2;
+  margin-bottom:14px;
+}
+.section-subtitle {
+  font-size:1.05rem;
+  color:var(--text-muted);
+  max-width:600px;
+  margin:0 auto 56px;
+}
+.gold-line {
+  width:60px; height:3px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+  border-radius:2px;
+  margin:16px 0 28px;
+}
+[dir="ltr"] .gold-line { background:linear-gradient(90deg,var(--gold),transparent); }
+[dir="rtl"] .gold-line { background:linear-gradient(270deg,var(--gold),transparent); margin-right:0; }
+
+/* ─── NAVIGATION ─── */
+#navbar {
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  padding:20px 0;
+  transition:var(--transition);
+}
+#navbar.scrolled {
+  background:rgba(6,9,15,0.97);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  padding:12px 0;
+  border-bottom:1px solid var(--gold-border);
+  box-shadow:0 4px 30px rgba(0,0,0,0.4);
+}
+.nav-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.nav-logo {
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  flex-shrink:0;
+}
+.nav-logo-main {
+  font-family:'Playfair Display',serif;
+  font-size:1.25rem;
+  font-weight:700;
+  color:var(--white);
+  white-space:nowrap;
+  line-height:1.2;
+}
+.nav-logo-sub {
+  font-size:0.72rem;
+  color:var(--gold);
+  letter-spacing:0.06em;
+  font-weight:500;
+}
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  list-style:none;
+}
+.nav-links a {
+  text-decoration:none;
+  font-size:0.9rem;
+  font-weight:500;
+  color:var(--text-light);
+  padding:7px 14px;
+  border-radius:8px;
+  transition:var(--transition);
+  white-space:nowrap;
+}
+.nav-links a:hover, .nav-links a.active {
+  color:var(--gold);
+  background:var(--gold-dim);
+}
+.nav-right {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0;
+}
+.lang-switcher {
+  display:flex;
+  align-items:center;
+  background:var(--card);
+  border:1px solid var(--gold-border);
+  border-radius:50px;
+  padding:3px;
+  gap:2px;
+}
+.lang-btn {
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-family:'Heebo',sans-serif;
+  font-size:0.8rem;
+  font-weight:700;
+  color:var(--text-muted);
+  padding:5px 13px;
+  border-radius:50px;
+  transition:var(--transition);
+  letter-spacing:0.04em;
+}
+.lang-btn.active {
+  background:var(--gold);
+  color:var(--bg);
+}
+.lang-btn:hover:not(.active) { color:var(--gold); }
+.nav-cta {
+  background:linear-gradient(135deg,var(--gold),#a07830);
+  color:var(--bg) !important;
+  font-weight:700 !important;
+  padding:9px 20px !important;
+  border-radius:8px !important;
+  border:none;
+  cursor:pointer;
+  font-size:0.85rem;
+  text-decoration:none;
+  display:inline-block;
+  transition:var(--transition) !important;
+  white-space:nowrap;
+}
+.nav-cta:hover { transform:translateY(-1px); box-shadow:0 4px 20px rgba(201,168,76,0.35); background:var(--gold-hover) !important; }
+
+.hamburger {
+  display:none;
+  background:none;
+  border:1px solid var(--gold-border);
+  border-radius:8px;
+  padding:8px;
+  cursor:pointer;
+  flex-direction:column;
+  gap:5px;
+}
+.hamburger span {
+  display:block;
+  width:22px; height:2px;
+  background:var(--gold);
+  border-radius:2px;
+  transition:var(--transition);
+}
+
+/* mobile menu */
+.mobile-menu {
+  display:none;
+  position:fixed;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(6,9,15,0.98);
+  z-index:999;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+}
+.mobile-menu.open { display:flex; }
+.mobile-menu a {
+  font-size:1.5rem;
+  font-weight:600;
+  color:var(--text);
+  text-decoration:none;
+  transition:var(--transition);
+}
+.mobile-menu a:hover { color:var(--gold); }
+.mobile-close {
+  position:absolute;
+  top:24px; right:24px;
+  background:none; border:none;
+  color:var(--text-muted); font-size:1.8rem;
+  cursor:pointer; transition:var(--transition);
+}
+[dir="rtl"] .mobile-close { right:auto; left:24px; }
+.mobile-close:hover { color:var(--gold); }
+
+/* ─── HERO ─── */
+#hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  padding:120px 0 80px;
+}
+.hero-bg {
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 80% 100%, rgba(15,30,60,0.8) 0%, transparent 60%),
+    linear-gradient(160deg, #0d1535 0%, #111d42 40%, #0e1a3a 100%);
+}
+.hero-grid-overlay {
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+}
+.hero-orb {
+  position:absolute;
+  border-radius:50%;
+  filter:blur(80px);
+  pointer-events:none;
+}
+.hero-orb-1 {
+  width:600px; height:600px;
+  background:radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+  top:-200px; right:-200px;
+}
+.hero-orb-2 {
+  width:400px; height:400px;
+  background:radial-gradient(circle, rgba(15,40,90,0.4) 0%, transparent 70%);
+  bottom:-100px; left:-100px;
+}
+.hero-content {
+  position:relative;
+  z-index:1;
+  max-width:760px;
+}
+[dir="rtl"] .hero-content { margin-right:0; }
+[dir="ltr"] .hero-content { margin-left:0; }
+.hero-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--gold);
+  background:var(--gold-dim);
+  border:1px solid var(--gold-border);
+  border-radius:50px;
+  padding:7px 18px;
+  margin-bottom:28px;
+  animation:fadeInUp 0.8s ease both;
+}
+.hero-badge::before {
+  content:'';
+  width:6px; height:6px;
+  background:var(--gold);
+  border-radius:50%;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.5; transform:scale(1.3); }
+}
+.hero-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.8rem,6vw,4.5rem);
+  font-weight:700;
+  color:var(--white);
+  line-height:1.1;
+  margin-bottom:16px;
+  animation:fadeInUp 0.8s ease 0.1s both;
+}
+.hero-title span { color:var(--gold); }
+.hero-subtitle {
+  font-size:1.05rem;
+  font-weight:500;
+  color:var(--gold);
+  letter-spacing:0.04em;
+  margin-bottom:20px;
+  animation:fadeInUp 0.8s ease 0.2s both;
+}
+.hero-tagline {
+  font-size:1.15rem;
+  color:var(--text-light);
+  max-width:580px;
+  line-height:1.75;
+  margin-bottom:44px;
+  animation:fadeInUp 0.8s ease 0.3s both;
+}
+.hero-actions {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  animation:fadeInUp 0.8s ease 0.4s both;
+}
+.btn-primary {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:linear-gradient(135deg,var(--gold),#9a7830);
+  color:var(--bg);
+  font-family:'Heebo',sans-serif;
+  font-size:0.95rem;
+  font-weight:700;
+  padding:14px 30px;
+  border-radius:10px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  transition:var(--transition);
+  box-shadow:0 4px 20px rgba(201,168,76,0.3);
+}
+.btn-primary:hover {
+  transform:translateY(-2px);
+  box-shadow:0 8px 30px rgba(201,168,76,0.45);
+  background:linear-gradient(135deg,var(--gold-hover),#b08840);
+}
+.btn-secondary {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:transparent;
+  color:var(--text-light);
+  font-family:'Heebo',sans-serif;
+  font-size:0.95rem;
+  font-weight:600;
+  padding:13px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.2);
+  cursor:pointer;
+  transition:var(--transition);
+}
+.btn-secondary:hover {
+  border-color:var(--gold);
+  color:var(--gold);
+  background:var(--gold-dim);
+}
+.hero-stats {
+  display:flex;
+  gap:40px;
+  margin-top:56px;
+  padding-top:40px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  animation:fadeInUp 0.8s ease 0.5s both;
+}
+.hero-stat-num {
+  font-family:'Playfair Display',serif;
+  font-size:2.2rem;
+  font-weight:700;
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:4px;
+}
+.hero-stat-label {
+  font-size:0.82rem;
+  color:var(--text-muted);
+  font-weight:500;
+}
+.hero-scroll {
+  position:absolute;
+  bottom:36px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  color:var(--text-muted);
+  font-size:0.75rem;
+  letter-spacing:0.1em;
+  animation:bounce 2s infinite;
+  text-decoration:none;
+  z-index:1;
+}
+.hero-scroll svg { color:var(--gold); }
+@keyframes bounce {
+  0%,100% { transform:translateX(-50%) translateY(0); }
+  50% { transform:translateX(-50%) translateY(8px); }
+}
+
+/* ─── ABOUT ─── */
+#about {
+  padding:100px 0;
+  background:var(--bg2);
+  position:relative;
+  overflow:hidden;
+}
+#about::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--gold-border), transparent);
+}
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1.6fr;
+  gap:64px;
+  align-items:center;
+}
+[dir="rtl"] .about-grid { direction:rtl; }
+.about-image-wrap {
+  position:relative;
+}
+.about-image-box {
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+  aspect-ratio:3/4;
+  background:var(--card);
+  border:1px solid var(--gold-border);
+}
+.about-image-box svg {
+  width:100%; height:100%;
+}
+.about-image-badge {
+  position:absolute;
+  bottom:24px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(6,9,15,0.95);
+  border:1px solid var(--gold-border);
+  border-radius:10px;
+  padding:12px 20px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  white-space:nowrap;
+}
+.about-image-badge strong {
+  display:block;
+  font-size:0.95rem;
+  color:var(--white);
+  margin-bottom:2px;
+}
+.about-image-badge span {
+  font-size:0.75rem;
+  color:var(--gold);
+}
+.about-image-corner {
+  position:absolute;
+  width:80px; height:80px;
+  border-color:var(--gold);
+  border-style:solid;
+  border-width:0;
+  opacity:0.6;
+}
+.about-image-corner.tl { top:-8px; left:-8px; border-top-width:2px; border-left-width:2px; border-radius:4px 0 0 0; }
+.about-image-corner.br { bottom:-8px; right:-8px; border-bottom-width:2px; border-right-width:2px; border-radius:0 0 4px 0; }
+[dir="rtl"] .about-image-corner.tl { left:auto; right:-8px; border-left-width:0; border-right-width:2px; border-radius:0 4px 0 0; }
+[dir="rtl"] .about-image-corner.br { right:auto; left:-8px; border-right-width:0; border-left-width:2px; border-radius:0 0 0 4px; }
+.about-text p {
+  color:var(--text-light);
+  margin-bottom:18px;
+  font-size:1.02rem;
+  line-height:1.85;
+}
+.about-stats {
+  display:flex;
+  gap:24px;
+  margin:32px 0;
+  flex-wrap:wrap;
+}
+.about-stat {
+  flex:1;
+  min-width:100px;
+  background:var(--card);
+  border:1px solid var(--gold-border);
+  border-radius:12px;
+  padding:20px 16px;
+  text-align:center;
+}
+.about-stat-num {
+  font-family:'Playfair Display',serif;
+  font-size:2rem;
+  font-weight:700;
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:6px;
+}
+.about-stat-label {
+  font-size:0.78rem;
+  color:var(--text-muted);
+}
+.qualifications {
+  background:var(--card);
+  border:1px solid var(--gold-border);
+  border-radius:12px;
+  padding:24px;
+  margin-top:28px;
+}
+.qual-title {
+  font-size:0.88rem;
+  font-weight:700;
+  color:var(--gold);
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.qual-list {
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.qual-list li {
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:0.9rem;
+  color:var(--text-light);
+}
+.qual-check {
+  width:18px; height:18px;
+  background:var(--gold-dim);
+  border:1px solid var(--gold-border);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.qual-check svg { color:var(--gold); }
+
+/* ─── SERVICES ─── */
+#services {
+  padding:100px 0;
+  background:var(--bg);
+  position:relative;
+}
+#services::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--gold-border), transparent);
+}
+.services-header { text-align:center; }
+.services-header .section-subtitle { margin:0 auto 56px; }
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.service-card {
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--radius);
+  padding:32px 28px;
+  transition:var(--transition);
+  position:relative;
+  overflow:hidden;
+  cursor:default;
+}
+.service-card::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, var(--gold-dim) 0%, transparent 60%);
+  opacity:0;
+  transition:var(--transition);
+}
+.service-card:hover {
+  border-color:var(--gold-border);
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(0,0,0,0.4);
+}
+.service-card:hover::before { opacity:1; }
+.service-icon {
+  width:52px; height:52px;
+  background:var(--gold-dim);
+  border:1px solid var(--gold-border);
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+  position:relative;
+  transition:var(--transition);
+}
+.service-icon svg { color:var(--gold); }
+.service-card:hover .service-icon {
+  background:var(--gold);
+}
+.service-card:hover .service-icon svg { color:var(--bg); }
+.service-card h3 {
+  font-size:1.1rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:10px;
+  line-height:1.3;
+}
+.service-card p {
+  font-size:0.88rem;
+  color:var(--text-muted);
+  line-height:1.7;
+}
+.service-arrow {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:16px;
+  font-size:0.82rem;
+  font-weight:600;
+  color:var(--gold);
+  opacity:0;
+  transition:var(--transition);
+}
+.service-card:hover .service-arrow { opacity:1; }
+
+/* ─── TESTIMONIALS ─── */
+#testimonials {
+  padding:100px 0;
+  background:var(--bg2);
+  position:relative;
+}
+#testimonials::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--gold-border), transparent);
+}
+.testimonials-header { text-align:center; }
+.testimonials-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.testimonial-card {
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--radius);
+  padding:32px;
+  transition:var(--transition);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+.testimonial-card:hover {
+  border-color:var(--gold-border);
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+.testimonial-quote {
+  font-size:3rem;
+  line-height:1;
+  color:var(--gold);
+  opacity:0.3;
+  font-family:Georgia,serif;
+  margin-bottom:8px;
+}
+.testimonial-stars {
+  display:flex;
+  gap:3px;
+  margin-bottom:16px;
+}
+.star { color:var(--gold); font-size:0.9rem; }
+.testimonial-text {
+  font-size:0.95rem;
+  color:var(--text-light);
+  line-height:1.8;
+  flex:1;
+  font-style:italic;
+}
+.testimonial-author {
+  margin-top:24px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.author-avatar {
+  width:44px; height:44px;
+  background:linear-gradient(135deg, var(--gold-dim), var(--card2));
+  border:1px solid var(--gold-border);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.9rem;
+  font-weight:700;
+  color:var(--gold);
+  flex-shrink:0;
+}
+.author-name {
+  font-weight:700;
+  font-size:0.9rem;
+  color:var(--white);
+  margin-bottom:2px;
+}
+.author-case {
+  font-size:0.78rem;
+  color:var(--gold);
+}
+
+/* ─── CONTACT ─── */
+#contact {
+  padding:100px 0;
+  background:var(--bg);
+  position:relative;
+}
+#contact::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--gold-border), transparent);
+}
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:start;
+}
+.contact-form-card {
+  background:var(--card);
+  border:1px solid var(--gold-border);
+  border-radius:16px;
+  padding:40px;
+}
+.form-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.form-group {
+  margin-bottom:18px;
+}
+.form-group label {
+  display:block;
+  font-size:0.82rem;
+  font-weight:600;
+  color:var(--text-muted);
+  margin-bottom:7px;
+  letter-spacing:0.03em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%;
+  background:var(--bg3);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:8px;
+  padding:12px 16px;
+  font-family:'Heebo',sans-serif;
+  font-size:0.92rem;
+  color:var(--text);
+  transition:var(--transition);
+  outline:none;
+  -webkit-appearance:none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color:var(--gold);
+  background:var(--card2);
+  box-shadow:0 0 0 3px var(--gold-dim);
+}
+.form-group textarea { resize:vertical; min-height:130px; }
+.form-group select { cursor:pointer; }
+.form-group select option { background:var(--card); }
+.form-submit { width:100%; margin-top:8px; font-size:1rem; padding:15px; }
+.form-success {
+  display:none;
+  background:rgba(34,197,94,0.1);
+  border:1px solid rgba(34,197,94,0.3);
+  border-radius:10px;
+  padding:16px 20px;
+  color:#4ade80;
+  font-size:0.92rem;
+  font-weight:500;
+  text-align:center;
+  margin-top:16px;
+}
+.form-success.show { display:block; }
+
+.contact-info-section { display:flex; flex-direction:column; gap:20px; }
+.contact-info-header { margin-bottom:8px; }
+.contact-info-header .section-subtitle { margin:0; text-align:start; }
+.contact-info-card {
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:12px;
+  padding:20px 24px;
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  transition:var(--transition);
+}
+.contact-info-card:hover { border-color:var(--gold-border); }
+.info-icon {
+  width:44px; height:44px;
+  background:var(--gold-dim);
+  border:1px solid var(--gold-border);
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.info-icon svg { color:var(--gold); }
+.info-label {
+  font-size:0.75rem;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:3px;
+}
+.info-value {
+  font-size:0.95rem;
+  font-weight:600;
+  color:var(--white);
+}
+.info-value a { color:var(--white); text-decoration:none; transition:var(--transition); }
+.info-value a:hover { color:var(--gold); }
+.emergency-card {
+  background:linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.05));
+  border:1px solid var(--gold-border);
+  border-radius:12px;
+  padding:20px 24px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.emergency-dot {
+  width:10px; height:10px;
+  background:#4ade80;
+  border-radius:50%;
+  flex-shrink:0;
+  box-shadow:0 0 8px #4ade80;
+  animation:pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+  0%,100% { box-shadow:0 0 8px #4ade80; }
+  50% { box-shadow:0 0 16px #4ade80, 0 0 24px rgba(74,222,128,0.4); }
+}
+.emergency-text strong {
+  display:block;
+  font-size:0.92rem;
+  color:var(--gold);
+  margin-bottom:2px;
+}
+.emergency-text span {
+  font-size:0.78rem;
+  color:var(--text-muted);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background:var(--bg2);
+  border-top:1px solid var(--gold-border);
+  padding:48px 0 32px;
+}
+.footer-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:40px;
+  padding-bottom:36px;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  flex-wrap:wrap;
+}
+.footer-brand-name {
+  font-family:'Playfair Display',serif;
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:6px;
+}
+.footer-brand-tag {
+  font-size:0.78rem;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+.footer-tagline {
+  font-size:0.85rem;
+  color:var(--text-muted);
+  max-width:280px;
+  line-height:1.7;
+}
+.footer-links-col h4 {
+  font-size:0.8rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:16px;
+}
+.footer-links-col ul {
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.footer-links-col a {
+  font-size:0.88rem;
+  color:var(--text-muted);
+  text-decoration:none;
+  transition:var(--transition);
+}
+.footer-links-col a:hover { color:var(--gold); }
+.footer-bottom {
+  padding-top:28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.footer-copy {
+  font-size:0.82rem;
+  color:var(--text-muted);
+}
+.footer-copy span { color:var(--gold); }
+.social-links { display:flex; gap:10px; }
+.social-link {
+  width:36px; height:36px;
+  background:var(--card);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text-muted);
+  text-decoration:none;
+  transition:var(--transition);
+  font-size:0.8rem;
+}
+.social-link:hover {
+  border-color:var(--gold-border);
+  color:var(--gold);
+  background:var(--gold-dim);
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(28px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.reveal {
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+.reveal-delay-1 { transition-delay:0.1s; }
+.reveal-delay-2 { transition-delay:0.2s; }
+.reveal-delay-3 { transition-delay:0.3s; }
+.reveal-delay-4 { transition-delay:0.4s; }
+.reveal-delay-5 { transition-delay:0.5s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width:1024px) {
+  .about-grid { grid-template-columns:1fr 1.8fr; gap:40px; }
+  .services-grid { grid-template-columns:repeat(2,1fr); }
+  .testimonials-grid { grid-template-columns:repeat(2,1fr); }
+}
+
+@media (max-width:768px) {
+  .nav-links,.nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .about-grid { grid-template-columns:1fr; }
+  .about-image-wrap { max-width:320px; margin:0 auto; }
+  .services-grid { grid-template-columns:1fr; }
+  .testimonials-grid { grid-template-columns:1fr; }
+  .contact-grid { grid-template-columns:1fr; }
+  .form-row { grid-template-columns:1fr; }
+  .hero-stats { gap:24px; flex-wrap:wrap; }
+  .footer-top { flex-direction:column; gap:28px; }
+  .footer-bottom { flex-direction:column; text-align:center; }
+  .contact-form-card { padding:24px; }
+  #hero { padding:100px 0 60px; }
+}
+
+@media (max-width:480px) {
+  .hero-actions { flex-direction:column; align-items:stretch; }
+  .btn-primary,.btn-secondary { justify-content:center; }
+  .about-stats { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── MOBILE MENU ─── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <a href="#hero" class="mobile-link" data-key="nav.home"></a>
+  <a href="#about" class="mobile-link" data-key="nav.about"></a>
+  <a href="#services" class="mobile-link" data-key="nav.services"></a>
+  <a href="#testimonials" class="mobile-link" data-key="nav.testimonials"></a>
+  <a href="#contact" class="mobile-link" data-key="nav.contact"></a>
+  <div class="lang-switcher" style="margin-top:20px">
+    <button class="lang-btn active" id="mobileLangHe" onclick="setLang('he')">עב</button>
+    <button class="lang-btn" id="mobileLangRu" onclick="setLang('ru')">РУ</button>
+  </div>
+</div>
+
+<!-- ─── NAVBAR ─── -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-logo-main" data-key="nav.logoMain"></span>
+        <span class="nav-logo-sub" data-key="nav.logoSub"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero" data-key="nav.home"></a></li>
+        <li><a href="#about" data-key="nav.about"></a></li>
+        <li><a href="#services" data-key="nav.services"></a></li>
+        <li><a href="#testimonials" data-key="nav.testimonials"></a></li>
+        <li><a href="#contact" data-key="nav.contact"></a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="langHe" onclick="setLang('he')">עב</button>
+          <button class="lang-btn" id="langRu" onclick="setLang('ru')">РУ</button>
+        </div>
+        <a href="#contact" class="nav-cta" data-key="nav.cta"></a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge" data-key="hero.badge"></div>
+      <h1 class="hero-title" data-key="hero.title"></h1>
+      <p class="hero-subtitle" data-key="hero.subtitle"></p>
+      <p class="hero-tagline" data-key="hero.tagline"></p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 10.81a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 16a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span data-key="hero.cta1"></span>
+        </a>
+        <a href="#about" class="btn-secondary">
+          <span data-key="hero.cta2"></span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-key="hero.stat1num"></div>
+          <div class="hero-stat-label" data-key="hero.stat1label"></div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-key="hero.stat2num"></div>
+          <div class="hero-stat-label" data-key="hero.stat2label"></div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-key="hero.stat3num"></div>
+          <div class="hero-stat-label" data-key="hero.stat3label"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="hero-scroll" aria-label="Scroll down">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </a>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-image-box">
+          <!-- Professional lawyer silhouette SVG placeholder -->
+          <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#162249"/>
+                <stop offset="100%" style="stop-color:#1a2d55"/>
+              </linearGradient>
+              <linearGradient id="figGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#253a6a"/>
+                <stop offset="100%" style="stop-color:#162249"/>
+              </linearGradient>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#c9a84c"/>
+                <stop offset="100%" style="stop-color:#9a7830"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="400" fill="url(#bgGrad)"/>
+            <!-- subtle grid -->
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(201,168,76,0.05)" stroke-width="0.5"/>
+            </pattern>
+            <rect width="300" height="400" fill="url(#grid)"/>
+            <!-- body / suit -->
+            <ellipse cx="150" cy="340" rx="90" ry="60" fill="url(#figGrad)"/>
+            <rect x="90" y="230" width="120" height="130" rx="8" fill="#152036"/>
+            <!-- suit lapels -->
+            <polygon points="150,230 120,290 150,270" fill="#0e1528"/>
+            <polygon points="150,230 180,290 150,270" fill="#0e1528"/>
+            <!-- shirt/tie -->
+            <rect x="143" y="235" width="14" height="85" rx="3" fill="#c9a84c" opacity="0.8"/>
+            <!-- neck -->
+            <rect x="138" y="200" width="24" height="36" rx="4" fill="#d4a574"/>
+            <!-- head -->
+            <ellipse cx="150" cy="180" rx="44" ry="52" fill="#d4a574"/>
+            <!-- hair -->
+            <ellipse cx="150" cy="142" rx="44" ry="22" fill="#2c1810"/>
+            <rect x="106" y="142" width="88" height="28" fill="#2c1810"/>
+            <!-- face features -->
+            <ellipse cx="134" cy="175" rx="5" ry="6" fill="#8B5A2B" opacity="0.7"/>
+            <ellipse cx="166" cy="175" rx="5" ry="6" fill="#8B5A2B" opacity="0.7"/>
+            <path d="M 136 195 Q 150 205 164 195" stroke="#8B5A2B" stroke-width="1.5" fill="none" opacity="0.6"/>
+            <!-- gold accent detail -->
+            <circle cx="240" cy="60" r="40" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+            <circle cx="240" cy="60" r="25" fill="none" stroke="rgba(201,168,76,0.1)" stroke-width="1"/>
+            <!-- scales of justice icon -->
+            <g transform="translate(198,30)">
+              <line x1="21" y1="0" x2="21" y2="40" stroke="#c9a84c" stroke-width="1.5" opacity="0.6"/>
+              <line x1="3" y1="10" x2="39" y2="10" stroke="#c9a84c" stroke-width="1.5" opacity="0.6"/>
+              <line x1="3" y1="10" x2="11" y2="26" stroke="#c9a84c" stroke-width="1.2" opacity="0.5"/>
+              <line x1="39" y1="10" x2="31" y2="26" stroke="#c9a84c" stroke-width="1.2" opacity="0.5"/>
+              <path d="M 3 26 Q 7 30 11 26" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.5"/>
+              <path d="M 31 26 Q 35 30 39 26" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.5"/>
+              <rect x="16" y="40" width="10" height="3" rx="1" fill="#c9a84c" opacity="0.4"/>
+            </g>
+          </svg>
+          <div class="about-image-badge">
+            <strong data-key="about.imageName"></strong>
+            <span data-key="about.imageSub"></span>
+          </div>
+        </div>
+        <div class="about-image-corner tl"></div>
+        <div class="about-image-corner br"></div>
+      </div>
+      <div class="about-text">
+        <div class="reveal">
+          <span class="section-badge" data-key="about.badge"></span>
+          <h2 class="section-title" data-key="about.title"></h2>
+          <div class="gold-line"></div>
+        </div>
+        <p class="reveal reveal-delay-1" data-key="about.bio1"></p>
+        <p class="reveal reveal-delay-2" data-key="about.bio2"></p>
+        <div class="about-stats reveal reveal-delay-3">
+          <div class="about-stat">
+            <div class="about-stat-num" data-key="about.stat1num"></div>
+            <div class="about-stat-label" data-key="about.stat1label"></div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num" data-key="about.stat2num"></div>
+            <div class="about-stat-label" data-key="about.stat2label"></div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num" data-key="about.stat3num"></div>
+            <div class="about-stat-label" data-key="about.stat3label"></div>
+          </div>
+        </div>
+        <div class="qualifications reveal reveal-delay-4">
+          <div class="qual-title" data-key="about.qualTitle"></div>
+          <ul class="qual-list">
+            <li>
+              <span class="qual-check"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span data-key="about.qual1"></span>
+            </li>
+            <li>
+              <span class="qual-check"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span data-key="about.qual2"></span>
+            </li>
+            <li>
+              <span class="qual-check"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span data-key="about.qual3"></span>
+            </li>
+            <li>
+              <span class="qual-check"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span data-key="about.qual4"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <span class="section-badge" data-key="services.badge"></span>
+      <h2 class="section-title" data-key="services.title"></h2>
+      <p class="section-subtitle" data-key="services.subtitle"></p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 data-key="services.s1title"></h3>
+        <p data-key="services.s1desc"></p>
+        <span class="service-arrow" data-key="services.learnMore">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <h3 data-key="services.s2title"></h3>
+        <p data-key="services.s2desc"></p>
+        <span class="service-arrow" data-key="services.learnMore">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        </div>
+        <h3 data-key="services.s3title"></h3>
+        <p data-key="services.s3desc"></p>
+        <span class="service-arrow" data-key="services.learnMore">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3 data-key="services.s4title"></h3>
+        <p data-key="services.s4desc"></p>
+        <span class="service-arrow" data-key="services.learnMore">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 data-key="services.s5title"></h3>
+        <p data-key="services.s5desc"></p>
+        <span class="service-arrow" data-key="services.learnMore">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3 data-key="services.s6title"></h3>
+        <p data-key="services.s6desc"></p>
+        <span class="service-arrow" data-key="services.learnMore">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <span class="section-badge" data-key="testimonials.badge"></span>
+      <h2 class="section-title" data-key="testimonials.title"></h2>
+      <p class="section-subtitle" data-key="testimonials.subtitle"></p>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text" data-key="testimonials.t1text"></p>
+        <div class="testimonial-author">
+          <div class="author-avatar" data-key="testimonials.t1initial"></div>
+          <div>
+            <div class="author-name" data-key="testimonials.t1name"></div>
+            <div class="author-case" data-key="testimonials.t1case"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text" data-key="testimonials.t2text"></p>
+        <div class="testimonial-author">
+          <div class="author-avatar" data-key="testimonials.t2initial"></div>
+          <div>
+            <div class="author-name" data-key="testimonials.t2name"></div>
+            <div class="author-case" data-key="testimonials.t2case"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text" data-key="testimonials.t3text"></p>
+        <div class="testimonial-author">
+          <div class="author-avatar" data-key="testimonials.t3initial"></div>
+          <div>
+            <div class="author-name" data-key="testimonials.t3name"></div>
+            <div class="author-case" data-key="testimonials.t3case"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <span class="section-badge" data-key="contact.badge"></span>
+      <h2 class="section-title" data-key="contact.title"></h2>
+      <p class="section-subtitle" data-key="contact.subtitle"></p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form-card reveal reveal-delay-1">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-key="contact.fname"></label>
+              <input type="text" id="fname" required>
+            </div>
+            <div class="form-group">
+              <label data-key="contact.fphone"></label>
+              <input type="tel" id="fphone" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-key="contact.femail"></label>
+            <input type="email" id="femail" required>
+          </div>
+          <div class="form-group">
+            <label data-key="contact.fsubject"></label>
+            <select id="fsubject">
+              <option data-key="contact.fsubjectOpt0"></option>
+              <option data-key="contact.fsubjectOpt1"></option>
+              <option data-key="contact.fsubjectOpt2"></option>
+              <option data-key="contact.fsubjectOpt3"></option>
+              <option data-key="contact.fsubjectOpt4"></option>
+              <option data-key="contact.fsubjectOpt5"></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-key="contact.fmessage"></label>
+            <textarea id="fmessage" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span data-key="contact.fsubmit"></span>
+          </button>
+          <div class="form-success" id="formSuccess" data-key="contact.fsuccess"></div>
+        </form>
+      </div>
+
+      <div class="contact-info-section reveal reveal-delay-2">
+        <div class="contact-info-header">
+          <h3 class="section-title" style="font-size:1.6rem" data-key="contact.infoTitle"></h3>
+          <div class="gold-line"></div>
+          <p class="section-subtitle" style="margin:0;text-align:start;font-size:0.9rem" data-key="contact.infoSub"></p>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="info-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 10.81a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 16a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="info-label" data-key="contact.phoneLabel"></div>
+            <div class="info-value"><a href="tel:+972546417888" data-key="contact.phone"></a></div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="info-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="info-label" data-key="contact.emailLabel"></div>
+            <div class="info-value"><a href="mailto:itrubman@gmail.com" data-key="contact.email"></a></div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="info-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-label" data-key="contact.addressLabel"></div>
+            <div class="info-value" data-key="contact.address"></div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="info-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="22 17 13 17"/><polyline points="22 11 13 11"/><polyline points="22 5 13 5"/><rect x="1" y="3" width="9" height="18" rx="1"/></svg>
+          </div>
+          <div>
+            <div class="info-label" data-key="contact.faxLabel"></div>
+            <div class="info-value" data-key="contact.fax"></div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="info-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="info-label" data-key="contact.hoursLabel"></div>
+            <div class="info-value" data-key="contact.hours"></div>
+          </div>
+        </div>
+
+        <div class="emergency-card">
+          <div class="emergency-dot"></div>
+          <div class="emergency-text">
+            <strong data-key="contact.emergency"></strong>
+            <span data-key="contact.emergencySub"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name" data-key="footer.name"></div>
+        <div class="footer-brand-tag" data-key="footer.tag"></div>
+        <p class="footer-tagline" data-key="footer.tagline"></p>
+      </div>
+      <div class="footer-links-col">
+        <h4 data-key="footer.linksTitle"></h4>
+        <ul>
+          <li><a href="#hero" data-key="nav.home"></a></li>
+          <li><a href="#about" data-key="nav.about"></a></li>
+          <li><a href="#services" data-key="nav.services"></a></li>
+          <li><a href="#testimonials" data-key="nav.testimonials"></a></li>
+          <li><a href="#contact" data-key="nav.contact"></a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4 data-key="footer.legalTitle"></h4>
+        <ul>
+          <li><a href="#" data-key="footer.privacy"></a></li>
+          <li><a href="#" data-key="footer.terms"></a></li>
+          <li><a href="#contact" data-key="footer.consult"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        © <span id="year"></span> <span data-key="footer.name"></span>. <span data-key="footer.rights"></span>.
+        <span style="margin:0 8px;color:var(--gold-border)">|</span>
+        <span data-key="footer.bar"></span>
+      </p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://wa.me/972546417888" class="social-link" aria-label="WhatsApp">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── CONTENT ───────────────────────────────────────────────
+const i18n = {
+  he: {
+    'nav.home': 'בית',
+    'nav.about': 'אודות',
+    'nav.services': 'שירותים',
+    'nav.testimonials': 'המלצות',
+    'nav.contact': 'צור קשר',
+    'nav.cta': 'ייעוץ חינמי',
+    'nav.logoMain': 'עו"ד יגאל טרובמן',
+    'nav.logoSub': 'משרד עורכי דין פלילי',
+
+    'hero.badge': 'עורך דין פלילי מומחה',
+    'hero.title': 'עו"ד יגאל טרובמן',
+    'hero.subtitle': 'הגנה משפטית מקצועית • ניסיון מוכח • תוצאות אמיתיות',
+    'hero.tagline': 'כשעתידך על כף המאזניים, אתה זקוק לעורך דין שייצג אותך באגרסיביות ובמסירות מלאה — בכל שלב של ההליך הפלילי.',
+    'hero.cta1': 'צור קשר עכשיו',
+    'hero.cta2': 'גלה עוד',
+    'hero.stat1num': '15+',
+    'hero.stat1label': 'שנות ניסיון',
+    'hero.stat2num': '500+',
+    'hero.stat2label': 'תיקים מוצלחים',
+    'hero.stat3num': '24/7',
+    'hero.stat3label': 'זמינות ללקוח',
+
+    'about.badge': 'אודות',
+    'about.title': 'מי אני',
+    'about.imageName': 'עו"ד יגאל טרובמן',
+    'about.imageSub': 'עורך דין פלילי בכיר',
+    'about.bio1': 'עו"ד יגאל טרובמן הוא עורך דין פלילי בכיר בעל ניסיון של למעלה מ-15 שנה בייצוג לקוחות בפני כל ערכאות בתי המשפט בישראל. הוא מתמחה בדיני עונשין ורכש מוניטין של מגן אגרסיבי, יצירתי ואפקטיבי.',
+    'about.bio2': 'עו"ד טרובמן מאמין כי כל לקוח ראוי לייצוג מקצועי ומסור, ללא קשר לחומרת האישום. הוא מציע גישה אישית לכל תיק, תוך בחינה מעמיקה של כל הראיות, הנסיבות, וחיפוש אחר כל הזדמנות אפשרית עבור הלקוח.',
+    'about.stat1num': '15+',
+    'about.stat1label': 'שנות ניסיון',
+    'about.stat2num': '500+',
+    'about.stat2label': 'תיקים מוצלחים',
+    'about.stat3num': '100%',
+    'about.stat3label': 'מסירות ללקוח',
+    'about.qualTitle': 'השכלה וכישורים',
+    'about.qual1': 'אוניברסיטת חיפה, תואר שני במשפטים',
+    'about.qual2': 'חבר לשכת עורכי הדין הישראלית',
+    'about.qual3': 'מומחה מוסמך בדיני פלילי',
+    'about.qual4': 'ניסיון בייצוג בפני בית המשפט העליון',
+
+    'services.badge': 'שירותים',
+    'services.title': 'תחומי התמחות',
+    'services.subtitle': 'ייצוג מקצועי ומסור בכל תחומי המשפט הפלילי',
+    'services.learnMore': 'קרא עוד',
+    'services.s1title': 'ייצוג פלילי',
+    'services.s1desc': 'ייצוג מקצועי בכל שלבי ההליך הפלילי, מהחקירה הראשונית ועד לגזר הדין הסופי.',
+    'services.s2title': 'הגנה בתיקי מעצר',
+    'services.s2desc': 'הגנה אפקטיבית בדיוני מעצר ומאסר עד תום ההליכים, עם דגש על שחרור מהיר.',
+    'services.s3title': 'ערעורים פליליים',
+    'services.s3desc': 'הגשת ערעורים מקצועיים לבתי המשפט המחוזיים ולבית המשפט העליון.',
+    'services.s4title': 'עבירות נשק וסמים',
+    'services.s4desc': 'ייצוג מיוחד ומנוסה בתיקי נשק, חומר נפץ ועבירות סמים בכל הדרגות.',
+    'services.s5title': 'עבירות אלימות',
+    'services.s5desc': 'הגנה בתיקי תקיפה, איומים, אלימות במשפחה ופגיעה בגוף.',
+    'services.s6title': 'ייעוץ משפטי',
+    'services.s6desc': 'ייעוץ מיידי, מקצועי וסודי בכל שלב — לפני חקירה, במהלכה ולאחריה.',
+
+    'testimonials.badge': 'המלצות',
+    'testimonials.title': 'מה אומרים הלקוחות',
+    'testimonials.subtitle': 'אמון שנבנה על בסיס תוצאות אמיתיות ושירות יוצא דופן',
+    'testimonials.t1text': 'עו"ד טרובמן ייצג אותי בתיק פלילי מורכב ביותר. הקצועיות, המסירות והאסטרטגיה שלו הובילו לתוצאה שלא ציפיתי לה. ממליץ בחום מאוד לכל מי שצריך עורך דין פלילי מנוסה.',
+    'testimonials.t1name': 'א. כהן',
+    'testimonials.t1case': 'תיק פלילי חמור',
+    'testimonials.t1initial': 'א',
+    'testimonials.t2text': 'בזמן הקשה ביותר בחיי, עו"ד טרובמן עמד לצידי. הסביר לי כל שלב, נלחם עבורי בכל כוחו וקיבלנו תוצאה מצוינת. תודה רבה מהלב, ממש שינית את חיי.',
+    'testimonials.t2name': 'מ. לוי',
+    'testimonials.t2case': 'תיק ערעור',
+    'testimonials.t2initial': 'מ',
+    'testimonials.t3text': 'ייצוג מעולה, תקשורת מצוינת ותוצאות מרשימות. עו"ד טרובמן הוא בדיוק מה שהייתי צריך בשעת משבר. מקצועי, אמין ויסודי לחלוטין.',
+    'testimonials.t3name': 'ד. שמעון',
+    'testimonials.t3case': 'תיק מעצר',
+    'testimonials.t3initial': 'ד',
+
+    'contact.badge': 'צור קשר',
+    'contact.title': 'פנה אלינו',
+    'contact.subtitle': 'אנו כאן לסייע לך — אל תתמודד עם זה לבד',
+    'contact.infoTitle': 'פרטי קשר',
+    'contact.infoSub': 'זמינים 24/7 לייעוץ דחוף',
+    'contact.fname': 'שם מלא',
+    'contact.fphone': 'טלפון',
+    'contact.femail': 'דואר אלקטרוני',
+    'contact.fsubject': 'נושא הפנייה',
+    'contact.fsubjectOpt0': 'בחר נושא',
+    'contact.fsubjectOpt1': 'ייעוץ ראשוני חינמי',
+    'contact.fsubjectOpt2': 'תיק פלילי פעיל',
+    'contact.fsubjectOpt3': 'דיון מעצר',
+    'contact.fsubjectOpt4': 'הגשת ערעור',
+    'contact.fsubjectOpt5': 'אחר',
+    'contact.fmessage': 'תאר את הסיטואציה בקצרה',
+    'contact.fsubmit': 'שלח פנייה',
+    'contact.fsuccess': '✓ תודה! פנייתך התקבלה. ניצור איתך קשר בהקדם האפשרי.',
+    'contact.phoneLabel': 'טלפון',
+    'contact.emailLabel': 'דואר אלקטרוני',
+    'contact.addressLabel': 'כתובת',
+    'contact.hoursLabel': 'שעות פעילות',
+    'contact.phone': '054-6417888',
+    'contact.email': 'itrubman@gmail.com',
+    'contact.address': 'שדרות פלי"ם 7 (בניין הפינקס), חיפה',
+    'contact.hours': 'א\'–ה\' 09:00–18:00 | ו\' 09:00–13:00',
+    'contact.faxLabel': 'פקס',
+    'contact.fax': '077-4704498',
+    'contact.emergency': 'זמין 24/7 לחירום',
+    'contact.emergencySub': 'להתקשרות דחופה מחוץ לשעות הפעילות',
+
+    'footer.name': 'עו"ד יגאל טרובמן',
+    'footer.tag': 'משרד עורכי דין פלילי',
+    'footer.tagline': 'הגנה משפטית מקצועית — כי עתידך חשוב',
+    'footer.linksTitle': 'ניווט מהיר',
+    'footer.legalTitle': 'משפטי',
+    'footer.privacy': 'מדיניות פרטיות',
+    'footer.terms': 'תנאי שימוש',
+    'footer.consult': 'ייעוץ חינמי',
+    'footer.rights': 'כל הזכויות שמורות',
+    'footer.bar': 'חבר לשכת עורכי הדין הישראלית',
+  },
+  ru: {
+    'nav.home': 'Главная',
+    'nav.about': 'Обо мне',
+    'nav.services': 'Услуги',
+    'nav.testimonials': 'Отзывы',
+    'nav.contact': 'Контакты',
+    'nav.cta': 'Бесплатная консультация',
+    'nav.logoMain': 'Адвокат Игаль Трубман',
+    'nav.logoSub': 'Уголовно-правовая практика',
+
+    'hero.badge': 'Специалист по уголовному праву',
+    'hero.title': 'Адвокат Игаль Трубман',
+    'hero.subtitle': 'Профессиональная защита • Проверенный опыт • Реальные результаты',
+    'hero.tagline': 'Когда ваше будущее под угрозой — вам нужен адвокат, который будет бороться за вас с полной отдачей и профессионализмом на каждом этапе уголовного процесса.',
+    'hero.cta1': 'Связаться сейчас',
+    'hero.cta2': 'Узнать больше',
+    'hero.stat1num': '15+',
+    'hero.stat1label': 'лет опыта',
+    'hero.stat2num': '500+',
+    'hero.stat2label': 'успешных дел',
+    'hero.stat3num': '24/7',
+    'hero.stat3label': 'доступность',
+
+    'about.badge': 'Обо мне',
+    'about.title': 'Кто я',
+    'about.imageName': 'Адвокат Игаль Трубман',
+    'about.imageSub': 'Старший уголовный адвокат',
+    'about.bio1': 'Адвокат Игаль Трубман — старший уголовный адвокат с более чем 15-летним опытом представления клиентов во всех судебных инстанциях Израиля. Он специализируется на уголовном праве и заслужил репутацию агрессивного, творческого и эффективного защитника.',
+    'about.bio2': 'Адвокат Трубман убеждён, что каждый клиент заслуживает профессиональной и преданной защиты, независимо от тяжести обвинения. Он предлагает индивидуальный подход к каждому делу, тщательно изучая все доказательства и обстоятельства.',
+    'about.stat1num': '15+',
+    'about.stat1label': 'лет опыта',
+    'about.stat2num': '500+',
+    'about.stat2label': 'успешных дел',
+    'about.stat3num': '100%',
+    'about.stat3label': 'преданность клиенту',
+    'about.qualTitle': 'Образование и квалификация',
+    'about.qual1': 'Хайфский университет, степень магистра права',
+    'about.qual2': 'Член Израильской коллегии адвокатов',
+    'about.qual3': 'Сертифицированный специалист по уголовному праву',
+    'about.qual4': 'Опыт представления в Верховном суде Израиля',
+
+    'services.badge': 'Услуги',
+    'services.title': 'Области специализации',
+    'services.subtitle': 'Профессиональное и преданное представление во всех областях уголовного права',
+    'services.learnMore': 'Подробнее',
+    'services.s1title': 'Уголовная защита',
+    'services.s1desc': 'Профессиональное представление на всех этапах уголовного процесса — от первоначального следствия до вынесения окончательного приговора.',
+    'services.s2title': 'Защита при задержании',
+    'services.s2desc': 'Эффективная защита на слушаниях по задержанию и предварительному заключению, с акцентом на скорейшее освобождение.',
+    'services.s3title': 'Уголовные апелляции',
+    'services.s3desc': 'Подача профессиональных апелляций в окружные суды и Верховный суд Израиля.',
+    'services.s4title': 'Дела об оружии и наркотиках',
+    'services.s4desc': 'Специальное представление по делам об оружии, взрывчатке и наркотических веществах всех категорий.',
+    'services.s5title': 'Дела о насилии',
+    'services.s5desc': 'Защита по делам о нападении, угрозах, домашнем насилии и причинении телесных повреждений.',
+    'services.s6title': 'Юридическая консультация',
+    'services.s6desc': 'Немедленная, профессиональная и строго конфиденциальная консультация на любом этапе — до, во время и после допроса.',
+
+    'testimonials.badge': 'Отзывы',
+    'testimonials.title': 'Что говорят клиенты',
+    'testimonials.subtitle': 'Доверие, основанное на реальных результатах и исключительном сервисе',
+    'testimonials.t1text': 'Адвокат Трубман представлял меня в очень сложном уголовном деле. Его профессионализм, преданность и стратегия привели к результату, которого я не ожидал. Горячо рекомендую всем, кто нуждается в опытном уголовном адвокате.',
+    'testimonials.t1name': 'А. Коэн',
+    'testimonials.t1case': 'Тяжкое уголовное дело',
+    'testimonials.t1initial': 'А',
+    'testimonials.t2text': 'В самый трудный момент моей жизни адвокат Трубман был рядом. Он объяснял каждый шаг, боролся за меня изо всех сил и мы добились превосходного результата. Огромное спасибо — вы изменили мою жизнь.',
+    'testimonials.t2name': 'М. Леви',
+    'testimonials.t2case': 'Апелляционное дело',
+    'testimonials.t2initial': 'М',
+    'testimonials.t3text': 'Блестящее представление, отличная коммуникация и впечатляющие результаты. Адвокат Трубман — именно то, что мне было нужно в момент кризиса. Полностью профессиональный, надёжный и основательный.',
+    'testimonials.t3name': 'Д. Шимон',
+    'testimonials.t3case': 'Дело о задержании',
+    'testimonials.t3initial': 'Д',
+
+    'contact.badge': 'Контакты',
+    'contact.title': 'Свяжитесь с нами',
+    'contact.subtitle': 'Мы здесь, чтобы помочь — не справляйтесь с этим в одиночку',
+    'contact.infoTitle': 'Контактная информация',
+    'contact.infoSub': 'Доступны 24/7 для срочных консультаций',
+    'contact.fname': 'Полное имя',
+    'contact.fphone': 'Телефон',
+    'contact.femail': 'Электронная почта',
+    'contact.fsubject': 'Тема обращения',
+    'contact.fsubjectOpt0': 'Выберите тему',
+    'contact.fsubjectOpt1': 'Бесплатная первичная консультация',
+    'contact.fsubjectOpt2': 'Действующее уголовное дело',
+    'contact.fsubjectOpt3': 'Слушание о задержании',
+    'contact.fsubjectOpt4': 'Подача апелляции',
+    'contact.fsubjectOpt5': 'Другое',
+    'contact.fmessage': 'Кратко опишите вашу ситуацию',
+    'contact.fsubmit': 'Отправить сообщение',
+    'contact.fsuccess': '✓ Спасибо! Ваше сообщение получено. Мы свяжемся с вами в ближайшее время.',
+    'contact.phoneLabel': 'Телефон',
+    'contact.emailLabel': 'Электронная почта',
+    'contact.addressLabel': 'Адрес',
+    'contact.hoursLabel': 'Часы работы',
+    'contact.phone': '054-6417888',
+    'contact.email': 'itrubman@gmail.com',
+    'contact.address': 'бульвар Пали-Ям 7 (здание «Феникс»), Хайфа',
+    'contact.hours': 'Пн–Чт 09:00–18:00 | Пт 09:00–13:00',
+    'contact.faxLabel': 'Факс',
+    'contact.fax': '077-4704498',
+    'contact.emergency': 'Доступен 24/7 для экстренных случаев',
+    'contact.emergencySub': 'Для срочных звонков вне рабочего времени',
+
+    'footer.name': 'Адвокат Игаль Трубман',
+    'footer.tag': 'Уголовно-правовая практика',
+    'footer.tagline': 'Профессиональная правовая защита — потому что ваше будущее важно',
+    'footer.linksTitle': 'Навигация',
+    'footer.legalTitle': 'Правовые документы',
+    'footer.privacy': 'Политика конфиденциальности',
+    'footer.terms': 'Условия использования',
+    'footer.consult': 'Бесплатная консультация',
+    'footer.rights': 'Все права защищены',
+    'footer.bar': 'Член Израильской коллегии адвокатов',
+  }
+};
+
+// ─── STATE ──────────────────────────────────────────────────
+let currentLang = 'he';
+
+// ─── LANGUAGE SWITCH ────────────────────────────────────────
+function setLang(lang) {
+  currentLang = lang;
+  const html = document.documentElement;
+  html.lang = lang;
+  html.dir = lang === 'he' ? 'rtl' : 'ltr';
+
+  // update all keyed elements
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    const text = i18n[lang][key];
+    if (text !== undefined) el.textContent = text;
+  });
+
+  // update lang buttons
+  ['langHe','mobileLangHe'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.classList.toggle('active', lang === 'he');
+  });
+  ['langRu','mobileLangRu'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.classList.toggle('active', lang === 'ru');
+  });
+
+  // update form placeholder/labels dynamically by also targeting inputs
+  const formSuccess = document.getElementById('formSuccess');
+  if (formSuccess) {
+    formSuccess.setAttribute('data-key','contact.fsuccess');
+    formSuccess.textContent = i18n[lang]['contact.fsuccess'];
+  }
+}
+
+// ─── NAVBAR SCROLL ──────────────────────────────────────────
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+  highlightNav();
+}, { passive: true });
+
+// ─── NAV ACTIVE HIGHLIGHTING ────────────────────────────────
+function highlightNav() {
+  const sections = ['hero','about','services','testimonials','contact'];
+  const scrollY = window.scrollY + 100;
+  let current = 'hero';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollY) current = id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    a.classList.toggle('active', href === '#' + current);
+  });
+}
+
+// ─── MOBILE MENU ────────────────────────────────────────────
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.add('open');
+});
+document.getElementById('mobileClose').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.remove('open');
+});
+document.querySelectorAll('.mobile-link').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.remove('open');
+  });
+});
+
+// ─── SCROLL REVEAL ──────────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ─── CONTACT FORM ────────────────────────────────────────────
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type=submit]');
+  const success = document.getElementById('formSuccess');
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+  setTimeout(() => {
+    success.classList.add('show');
+    success.textContent = i18n[currentLang]['contact.fsuccess'];
+    this.reset();
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    setTimeout(() => success.classList.remove('show'), 6000);
+  }, 900);
+});
+
+// ─── YEAR ────────────────────────────────────────────────────
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// ─── INIT ────────────────────────────────────────────────────
+setLang('he');
+</script>
+</body>
+</html>
