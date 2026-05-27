@@ -129,6 +129,21 @@ body.ltr { font-family:'Heebo','Arial',sans-serif; }
   letter-spacing:0.06em;
   font-weight:500;
 }
+.nav-logo-img {
+  height:52px;
+  width:auto;
+  display:block;
+  -webkit-mask-image: radial-gradient(ellipse 68% 82% at 50% 52%, black 30%, transparent 78%);
+  mask-image: radial-gradient(ellipse 68% 82% at 50% 52%, black 30%, transparent 78%);
+}
+.footer-logo-img {
+  height:56px;
+  width:auto;
+  display:block;
+  -webkit-mask-image: radial-gradient(ellipse 68% 82% at 50% 52%, black 30%, transparent 78%);
+  mask-image: radial-gradient(ellipse 68% 82% at 50% 52%, black 30%, transparent 78%);
+  margin-bottom:10px;
+}
 .nav-links {
   display:flex;
   align-items:center;
@@ -1155,8 +1170,7 @@ footer {
   <div class="container">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
-        <span class="nav-logo-main" data-key="nav.logoMain"></span>
-        <span class="nav-logo-sub" data-key="nav.logoSub"></span>
+        <img src="logo.jpg" alt="Igal Trubman Attorney at Law" class="nav-logo-img">
       </a>
       <ul class="nav-links">
         <li><a href="#hero" data-key="nav.home"></a></li>
@@ -1653,8 +1667,7 @@ footer {
   <div class="container">
     <div class="footer-top">
       <div>
-        <div class="footer-brand-name" data-key="footer.name"></div>
-        <div class="footer-brand-tag" data-key="footer.tag"></div>
+        <img src="logo.jpg" alt="Igal Trubman Attorney at Law" class="footer-logo-img">
         <p class="footer-tagline" data-key="footer.tagline"></p>
       </div>
       <div class="footer-links-col">
