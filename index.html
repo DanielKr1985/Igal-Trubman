@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 :root {
   --gold: #c9a84c;
@@ -1821,21 +1822,66 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// ─── EMAILJS CONFIG ──────────────────────────────────────────
+// ⚠️  Replace these three values with your own from emailjs.com
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // Account → API Keys
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // Email Templates → Template ID
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
 // ─── CONTACT FORM ────────────────────────────────────────────
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const btn = this.querySelector('button[type=submit]');
+  const btn     = this.querySelector('button[type=submit]');
   const success = document.getElementById('formSuccess');
+  const originalHTML = btn.innerHTML;
+
+  // Basic validation
+  const name    = document.getElementById('fname').value.trim();
+  const email   = document.getElementById('femail').value.trim();
+  const phone   = document.getElementById('fphone').value.trim();
+  const subject = document.getElementById('fsubject').value;
+  const message = document.getElementById('fmessage').value.trim();
+  if (!name || !email || !message) return;
+
+  // Loading state
   btn.disabled = true;
-  btn.style.opacity = '0.7';
-  setTimeout(() => {
+  btn.innerHTML = '<span style="opacity:.7">' + (currentLang === 'he' ? 'שולח...' : 'Отправка...') + '</span>';
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+    from_name:    name,
+    from_email:   email,
+    phone:        phone || '—',
+    subject:      subject || '—',
+    message:      message,
+    to_email:     'itrubman@gmail.com',
+    reply_to:     email,
+  })
+  .then(() => {
     success.classList.add('show');
     success.textContent = i18n[currentLang]['contact.fsuccess'];
     this.reset();
+    setTimeout(() => success.classList.remove('show'), 7000);
+  })
+  .catch((err) => {
+    console.error('EmailJS error:', err);
+    success.style.background  = 'rgba(239,68,68,0.1)';
+    success.style.borderColor = 'rgba(239,68,68,0.3)';
+    success.style.color       = '#f87171';
+    success.classList.add('show');
+    success.textContent = currentLang === 'he'
+      ? '⚠ שגיאה בשליחה. אנא נסה שוב או התקשר ישירות.'
+      : '⚠ Ошибка отправки. Попробуйте ещё раз или позвоните напрямую.';
+    setTimeout(() => {
+      success.classList.remove('show');
+      success.removeAttribute('style');
+    }, 7000);
+  })
+  .finally(() => {
     btn.disabled = false;
-    btn.style.opacity = '1';
-    setTimeout(() => success.classList.remove('show'), 6000);
-  }, 900);
+    btn.innerHTML = originalHTML;
+  });
 });
 
 // ─── YEAR ────────────────────────────────────────────────────
