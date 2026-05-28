@@ -1077,6 +1077,31 @@ footer {
   color:var(--text-muted);
 }
 .footer-copy span { color:var(--gold); }
+.footer-pixel {
+  border-top:1px solid rgba(255,255,255,0.05);
+  margin-top:20px;
+  padding-top:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.footer-pixel-text {
+  font-size:0.78rem;
+  color:var(--text-muted);
+  letter-spacing:0.03em;
+}
+.footer-pixel-logo {
+  height:32px;
+  width:auto;
+  display:block;
+  -webkit-mask-image: radial-gradient(ellipse 72% 85% at 50% 50%, black 35%, transparent 80%);
+  mask-image: radial-gradient(ellipse 72% 85% at 50% 50%, black 35%, transparent 80%);
+  opacity:0.85;
+  transition:opacity 0.3s;
+}
+.footer-pixel-logo:hover { opacity:1; }
 .social-links { display:flex; gap:10px; }
 .social-link {
   width:36px; height:36px;
@@ -1704,6 +1729,10 @@ footer {
         </a>
       </div>
     </div>
+    <div class="footer-pixel">
+      <span class="footer-pixel-text">האתר נבנה ועוצב ע"י</span>
+      <img src="pixel-logo.jpg" alt="Pixel Digital Studio" class="footer-pixel-logo">
+    </div>
   </div>
 </footer>
 
@@ -1738,7 +1767,7 @@ const i18n = {
     'about.title': 'מי אני',
     'about.imageName': 'עו"ד יגאל טרובמן',
     'about.imageSub': 'עורך דין פלילי בכיר',
-    'about.bio1': 'עו"ד יגאל טרובמן הוא עורך דין פלילי בכיר בעל ניסיון של למעלה מ-15 שנה בייצוג לקוחות בפני כל ערכאות בתי המשפט בישראל. הוא מתמחה בדיני עונשין ורכש מוניטין של מגן אגרסיבי, יצירתי ואפקטיבי.',
+    'about.bio1': 'עו"ד יגאל טרובמן הוא עורך דין פלילי בכיר בעל ניסיון של למעלה מ-15 שנה בייצוג לקוחות בפני כל ערכאות בתי המשפט בישראל. הוא מתמחה בדיני עונשין ורכש מוניטין של מגן אסטרטגי, יצירתי ואפקטיבי.',
     'about.bio2': 'עו"ד טרובמן מאמין כי כל לקוח ראוי לייצוג מקצועי ומסור, ללא קשר לחומרת האישום. הוא מציע גישה אישית לכל תיק, תוך בחינה מעמיקה של כל הראיות, הנסיבות, וחיפוש אחר כל הזדמנות אפשרית עבור הלקוח.',
     'about.stat1num': '15+',
     'about.stat1label': 'שנות ניסיון',
@@ -1868,7 +1897,7 @@ const i18n = {
     'about.title': 'Кто я',
     'about.imageName': 'Адвокат Игаль Трубман',
     'about.imageSub': 'Старший уголовный адвокат',
-    'about.bio1': 'Адвокат Игаль Трубман — старший уголовный адвокат с более чем 15-летним опытом представления клиентов во всех судебных инстанциях Израиля. Он специализируется на уголовном праве и заслужил репутацию агрессивного, творческого и эффективного защитника.',
+    'about.bio1': 'Адвокат Игаль Трубман — старший уголовный адвокат с более чем 15-летним опытом представления клиентов во всех судебных инстанциях Израиля. Он специализируется на уголовном праве и заслужил репутацию стратегического, творческого и эффективного защитника.',
     'about.bio2': 'Адвокат Трубман убеждён, что каждый клиент заслуживает профессиональной и преданной защиты, независимо от тяжести обвинения. Он предлагает индивидуальный подход к каждому делу, тщательно изучая все доказательства и обстоятельства.',
     'about.stat1num': '15+',
     'about.stat1label': 'лет опыта',
