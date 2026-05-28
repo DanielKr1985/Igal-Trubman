@@ -1151,25 +1151,51 @@ footer {
 }
 
 @media (max-width:768px) {
-  .nav-links,.nav-cta { display:none; }
-  .hamburger { display:flex; }
+  /* ── prevent horizontal scroll ── */
+  html, body { overflow-x:hidden; max-width:100vw; }
+  #hero { overflow:hidden; }
+
+  /* ── navbar ── */
+  .nav-links, .nav-cta { display:none; }
+  .hamburger { display:flex !important; flex-shrink:0; }
+  .nav-inner { gap:8px; }
+  .nav-right { gap:6px; }
+  /* shrink lang switcher so hamburger always has room */
+  .lang-btn { padding:5px 9px; font-size:0.75rem; }
+  /* shrink logo image on mobile */
+  .nav-logo-img { height:38px; }
+  .nav-logo { flex-shrink:0; }
+
+  /* ── sections ── */
   .about-grid { grid-template-columns:1fr; }
-  .about-image-wrap { max-width:320px; margin:0 auto; }
-  .services-grid { grid-template-columns:1fr; }
+  .about-image-wrap { max-width:280px; margin:0 auto; }
+  .services-grid { grid-template-columns:1fr 1fr; }
   .testimonials-grid { grid-template-columns:1fr; }
+  .press-grid { grid-template-columns:1fr; }
   .contact-grid { grid-template-columns:1fr; }
   .form-row { grid-template-columns:1fr; }
-  .hero-stats { gap:24px; flex-wrap:wrap; }
+  .hero-stats { gap:16px; flex-wrap:wrap; }
   .footer-top { flex-direction:column; gap:28px; }
   .footer-bottom { flex-direction:column; text-align:center; }
-  .contact-form-card { padding:24px; }
-  #hero { padding:100px 0 60px; }
+  .contact-form-card { padding:20px; }
+  #hero { padding:90px 0 50px; }
+
+  /* ── clip oversized decorative orbs ── */
+  .hero-orb { max-width:100vw; }
+
+  /* ── font sizes ── */
+  .hero-title { font-size:clamp(1.9rem,8vw,2.8rem); }
+  .section-title { font-size:clamp(1.6rem,6vw,2.2rem); }
 }
 
 @media (max-width:480px) {
+  .services-grid { grid-template-columns:1fr; }
   .hero-actions { flex-direction:column; align-items:stretch; }
   .btn-primary,.btn-secondary { justify-content:center; }
   .about-stats { flex-direction:column; }
+  .hero-stats { justify-content:center; }
+  .nav-logo-img { height:34px; }
+  .lang-btn { padding:4px 8px; }
 }
 </style>
 </head>
@@ -1769,7 +1795,7 @@ const i18n = {
     'about.title': 'מי אני',
     'about.imageName': 'עו"ד יגאל טרובמן',
     'about.imageSub': 'עורך דין פלילי בכיר',
-    'about.bio1': 'עו"ד יגאל טרובמן הוא עורך דין פלילי בכיר בעל ניסיון של למעלה מ-15 שנה בייצוג לקוחות בפני כל ערכאות בתי המשפט בישראל. הוא מתמחה בדיני עונשין ורכש מוניטין של מגן אסטרטגי, יצירתי ואפקטיבי.',
+    'about.bio1': 'עו"ד יגאל טרובמן הוא עורך דין פלילי בכיר בעל ניסיון של למעלה מ-15 שנה בייצוג לקוחות בפני כל ערכאות בתי המשפט בישראל. הוא מתמחה בדיני עונשין ורכש מוניטין של מגן אסרטיבי, יצירתי ואפקטיבי.',
     'about.bio1b': 'בוגר תואר ראשון במשפטים (LL.B) מטעם אוניברסיטת חיפה, ובוגר תואר שני (LL.M), מוסמך במשפטים עם התמחות בפלילי מטעם אוניברסיטת חיפה.',
     'about.bio1c': 'התמחה בפרקליטות מחוז חיפה (פלילי).',
     'about.bio2': 'עו"ד טרובמן מאמין כי כל לקוח ראוי לייצוג מקצועי ומסור, ללא קשר לחומרת האישום. הוא מציע גישה אישית לכל תיק, תוך בחינה מעמיקה של כל הראיות, הנסיבות, וחיפוש אחר כל הזדמנות אפשרית עבור הלקוח.',
@@ -1901,7 +1927,7 @@ const i18n = {
     'about.title': 'Кто я',
     'about.imageName': 'Адвокат Игаль Трубман',
     'about.imageSub': 'Старший уголовный адвокат',
-    'about.bio1': 'Адвокат Игаль Трубман — старший уголовный адвокат с более чем 15-летним опытом представления клиентов во всех судебных инстанциях Израиля. Он специализируется на уголовном праве и заслужил репутацию стратегического, творческого и эффективного защитника.',
+    'about.bio1': 'Адвокат Игаль Трубман — старший уголовный адвокат с более чем 15-летним опытом представления клиентов во всех судебных инстанциях Израиля. Он специализируется на уголовном праве и заслужил репутацию ассертивного, творческого и эффективного защитника.',
     'about.bio1b': 'Бакалавр права (LL.B) Хайфского университета, а также магистр права (LL.M) со специализацией в уголовном праве Хайфского университета.',
     'about.bio1c': 'Проходил стажировку в прокуратуре округа Хайфа (уголовный отдел).',
     'about.bio2': 'Адвокат Трубман убеждён, что каждый клиент заслуживает профессиональной и преданной защиты, независимо от тяжести обвинения. Он предлагает индивидуальный подход к каждому делу, тщательно изучая все доказательства и обстоятельства.',
